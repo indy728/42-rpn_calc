@@ -22,7 +22,8 @@ Attempt at a visual interpretation:
 
 \* denotes location traversing the string  
 
-str = argv[1] = "3 11 5 - 4 + +"  
+str = argv[1] = "3 11 5 - 4 + +"
+
 "\*3 11 5 - 4 + +"  
 atoi(3)  
 [BEGIN LIST] -1- { 3 | NULL }  
