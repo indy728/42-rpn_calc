@@ -14,7 +14,7 @@ The rpn\_calc program will return "Error\n" to STDOUT if:
 • The elements / operators are separated by anything other than exactly one space (' ').  
 • There are any extraneous characters as input (non-math/numeric/space).  
 • The last character of input is not a mathematical operator.  
-• The number of converted integers is more than one plus the number of operators (interpreted if there is more than one element in the stack after traversing the string).  
+• The number of converted integers is more than one plus the number of operators (there is more than one element in the stack after traversing the string).  
 
 Attempt at a visual interpretation:  
 ./rpn\_calc "3 11 5 - 4 + +" | cat -e  
