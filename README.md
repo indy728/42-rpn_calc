@@ -8,7 +8,6 @@ List / stack elements are created for each string-to-integer conversion. When an
 The rpn\_calc program will return a value (followed by a newline character) to STDOUT via printf if there is exactly one parameter as input and only if that parameter is interpretable in Reverse Polish Notation.
 
 The rpn\_calc program will return "Error\n" to STDOUT if:
-
 • The number of input parameters is not exactly one.
 • There are not at least two elements in the stack when an operator character is interpreted (improper RPN order/ notation).
 • The applied operator would attempt to divide or modulus by zero (floating point exception).
@@ -25,7 +24,7 @@ Attempt at a visual interpretation:
 
 str = argv[1] = "3 11 5 - 4 + +"
 "\*3 11 5 - 4 + +"
-\- atoi(3)
+atoi(3)
 [BEGIN LIST] -1- { 3 | NULL }
 ++str
 
@@ -33,7 +32,7 @@ str = argv[1] = "3 11 5 - 4 + +"
 ++str;
 
 "3 \*11 5 - 4 + +"
-\- atoi(11)
+atoi(11)
 [BEGIN LIST] -1- { 11 | -> } -2- { 3 | NULL }
 ++str (x 2)
 
@@ -41,7 +40,7 @@ str = argv[1] = "3 11 5 - 4 + +"
 ++str
 
 "3 11 \*5 - 4 + +"
-\-atoi(5)
+atoi(5)
 [BEGIN LIST] -1- { 5 | -> } -2- { 11 | -> } -3- { 3 | NULL }
 ++str
 
@@ -57,7 +56,7 @@ str = argv[1] = "3 11 5 - 4 + +"
 ++str
 
 "3 11 5 - \*4 + +"
-\- atoi(4)
+atoi(4)
 [BEGIN LIST] -1- { 4 | -> } -2- { 6 | -> } -3- { 3 | NULL }
 ++str
 
