@@ -6,7 +6,7 @@
 /*   By: kmurray <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/01 20:11:23 by kmurray           #+#    #+#             */
-/*   Updated: 2017/02/01 23:21:13 by kmurray          ###   ########.fr       */
+/*   Updated: 2017/02/08 23:30:18 by kmurray          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ int	ft_operate(t_list **begin_list, char c)
 	if (c == '+')
 		*a += b;
 	else if (c == '-')
-		*a -= b;
+		b -= *a;
 	else if (c == '*')
 		*a *= b;
 	else if (c == '/')
 	{
-//		if (b == 0)
-//			return (0);
+		if (b == 0)
+			return (0);
 		*a /= b;
 	}
 	else if (c == '%')
 	{
-//		if (b == 0)
-//			return (0);
+		if (b == 0)
+			return (0);
 		*a %= b;
 	}
 	ft_lstdel(begin_list);
